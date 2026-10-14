@@ -13,8 +13,8 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# Data (we ignore raw data to prevent pushing sensitive/large files)
-data/raw/
+# Data (we ignore data to prevent pushing sensitive/large files)
+data/
 
 # Personal
 guides/
