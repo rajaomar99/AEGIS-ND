@@ -1,0 +1,4 @@
+Model Architecture,5-Fold CV AUC,Train ROC-AUC,Test ROC-AUC,Generalization Gap (Δ),Test PR-AUC,Test Accuracy,Test F1-Score,Test Precision,Test Recall,Brier Score
+Random Forest (Primary Target),0.9474 ± 0.0162,0.9973,0.7232,0.2741,0.5392,0.6623,0.0714,0.5,0.0385,0.2024
+XGBoost Classifier,0.8618 ± 0.0469,0.9998,0.6599,0.3399,0.4248,0.6104,0.1667,0.3,0.1154,0.2196
+Logistic Regression (L2),0.9906 ± 0.0072,0.9995,0.6222,0.3773,0.4096,0.6494,0.2286,0.4444,0.1538,0.2486
