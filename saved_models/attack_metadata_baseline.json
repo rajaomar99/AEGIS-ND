@@ -1,0 +1,44 @@
+{
+  "attack_type": "Black-Box Shadow-Model Membership Inference Attack",
+  "methodology": "Shokri et al. (2017) / Salem et al. (2019)",
+  "shadow_models": {
+    "count": 10,
+    "architecture": "RandomForestClassifier",
+    "train_ratio": 0.5
+  },
+  "meta_classifier": {
+    "model": "LogisticRegression(penalty='l2')",
+    "features": [
+      "P(True Label)",
+      "P(Max)",
+      "Margin |P1 - P0|",
+      "Shannon Entropy H(P)",
+      "P(AD)"
+    ],
+    "coefficients": [
+      0.9534032455813086,
+      -0.1596052318823063,
+      -0.1596052318823046,
+      -0.9698250954247352,
+      1.1381541531563797
+    ],
+    "intercept": 0.005134086252919282
+  },
+  "evaluation_cohort": {
+    "n_members": 306,
+    "n_non_members": 77,
+    "total": 383
+  },
+  "metrics": {
+    "roc_auc": 0.7878,
+    "pr_auc": 0.9351,
+    "advantage": 0.5755,
+    "privacy_leakage": 0.2878,
+    "accuracy": 0.5718,
+    "precision": 0.9226,
+    "recall": 0.5065,
+    "f1": 0.654,
+    "mean_member_score": 0.5134,
+    "mean_non_member_score": 0.3053
+  }
+}

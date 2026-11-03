@@ -1,0 +1,11 @@
+Metric,Value,Interpretation
+Attack ROC-AUC,0.7878,"Discrimination power of attack (0.5=random, 1.0=full leak)"
+Attack PR-AUC,0.9351,Precision-recall area under curve accounting for class imbalance
+Adversarial Advantage,0.5755,Cryptographic advantage = 2 * (AUC - 0.5)
+Empirical Privacy Leakage,0.2878,AUC excess above random guessing benchmark
+Attack Accuracy (thr=0.5),0.5718,Classification accuracy on membership status
+Attack Precision,0.9226,Fraction of predicted members who were true members
+Attack Recall,0.5065,Fraction of true members successfully re-identified
+Attack F1-Score,0.6540,Harmonic mean of attack precision and recall
+Mean Score (Members),0.5134,Average inferred membership probability for training subjects
+Mean Score (Non-Members),0.3053,Average inferred membership probability for test subjects
