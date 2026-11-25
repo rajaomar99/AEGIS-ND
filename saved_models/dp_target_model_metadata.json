@@ -1,0 +1,39 @@
+{
+  "model_architecture": "diffprivlib.models.RandomForestClassifier",
+  "library": "diffprivlib (IBM)",
+  "optimal_epsilon": 5.0,
+  "hyperparameters": {
+    "n_estimators": 30,
+    "epsilon": 5.0,
+    "max_depth": 4,
+    "classes": [
+      0,
+      1
+    ],
+    "random_state": 42
+  },
+  "features": {
+    "total_count": 104,
+    "snp_count": 100,
+    "clinical_count": 4
+  },
+  "clinical_utility": {
+    "test_roc_auc": 0.5683,
+    "test_pr_auc": 0.3757,
+    "test_accuracy": 0.6234,
+    "test_f1": 0.0645,
+    "generalization_gap": 0.1578
+  },
+  "adversarial_security": {
+    "attack_roc_auc": 0.5394,
+    "attack_pr_auc": 0.8205,
+    "adversarial_advantage": 0.0788,
+    "empirical_leakage": 0.0394,
+    "attack_precision": 0.75,
+    "attack_accuracy": 0.2115
+  },
+  "guarantee": {
+    "formal_dp_guarantee": "(5.0, 0)-Differential Privacy",
+    "theoretical_max_advantage": 147.4132
+  }
+}

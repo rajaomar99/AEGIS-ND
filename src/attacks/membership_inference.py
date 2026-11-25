@@ -80,8 +80,17 @@ def load_genomic_data_and_target_model() -> Tuple[
     y_train = np.load(PROCESSED_DIR / "y_train.npy")
     y_test = np.load(PROCESSED_DIR / "y_test.npy")
 
-    with open(PROCESSED_DIR / "feature_names.json", "r", encoding="utf-8") as f:
-        feature_names = json.load(f)
+    feat_json_path = PROCESSED_DIR / "selected_features.json"
+    if not feat_json_path.exists():
+        raise FileNotFoundError(
+            f"Feature metadata not found at {feat_json_path}. "
+            "Please run Phase 3 (src/preprocessing.py) first."
+        )
+
+    with open(feat_json_path, "r", encoding="utf-8") as f:
+        meta = json.load(f)
+
+    feature_names = [s["snp_id"] for s in meta["top_snps"]] + meta["clinical_covariates"]
 
     target_model_path = SAVED_MODELS_DIR / "target_model.pkl"
     if not target_model_path.exists():
