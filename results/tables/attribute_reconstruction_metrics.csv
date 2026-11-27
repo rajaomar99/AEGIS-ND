@@ -1,0 +1,9 @@
+Target Attribute,Model,Cohort Partition,Reconstruction ROC-AUC,Reconstruction PR-AUC,Reconstruction Accuracy,Balanced Accuracy,Reconstruction Precision,Reconstruction Recall,F1-Score,Base Rate (Prior),Adversarial Info Gain
+apoe4_carrier,Baseline RF (eps=inf),Train (Members),0.7521,0.7484,0.7549,0.7124,0.8243,0.4959,0.6193,0.598,0.1569
+apoe4_carrier,Baseline RF (eps=inf),Test (Non-Members),0.6122,0.573,0.6753,0.6178,0.7143,0.3226,0.4444,0.5974,0.0779
+apoe4_carrier,Defended DP-RF (eps=5.0),Train (Members),0.3575,0.3412,0.598,0.5,0.0,0.0,0.0,0.598,0.0
+apoe4_carrier,Defended DP-RF (eps=5.0),Test (Non-Members),0.3903,0.3549,0.5974,0.5,0.0,0.0,0.0,0.5974,0.0
+rs769449,Baseline RF (eps=inf),Train (Members),0.7366,0.6549,0.8072,0.7149,0.7586,0.4944,0.5986,0.7092,0.098
+rs769449,Baseline RF (eps=inf),Test (Non-Members),0.6516,0.5163,0.6623,0.566,0.5,0.2692,0.35,0.6623,0.0
+rs769449,Defended DP-RF (eps=5.0),Train (Members),0.4977,0.2908,0.7092,0.5,0.0,0.0,0.0,0.7092,0.0
+rs769449,Defended DP-RF (eps=5.0),Test (Non-Members),0.5,0.3377,0.6623,0.5,0.0,0.0,0.0,0.6623,0.0

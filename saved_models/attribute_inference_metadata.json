@@ -1,0 +1,22 @@
+{
+  "attack_type": "Model Inversion & Genomic Attribute Reconstruction Attack",
+  "methodology": "Fredrikson et al. (2014, 2015) / Yeom et al. (2018)",
+  "target_attributes": [
+    "apoe4_carrier",
+    "rs769449"
+  ],
+  "evaluated_models": [
+    "Baseline RF (eps=inf)",
+    "Defended DP-RF (eps=5.0)"
+  ],
+  "evaluated_cohorts": [
+    "Train (Members, N=306)",
+    "Test (Non-Members, N=77)"
+  ],
+  "summary": {
+    "apoe4_baseline_train_auc": 0.7521,
+    "apoe4_dp_train_auc": 0.3575,
+    "snp_baseline_train_auc": 0.7366,
+    "snp_dp_train_auc": 0.4977
+  }
+}
