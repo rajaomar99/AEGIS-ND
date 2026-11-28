@@ -1,0 +1,5 @@
+Model Architecture,Privacy Defense,CV ROC-AUC (5-Fold),Train ROC-AUC,Test ROC-AUC,Test Accuracy,Generalization Gap,MIA Attack ROC-AUC,MIA Adversarial Advantage,MIA Re-ID Precision,APOE4 Inversion ROC-AUC,APOE4 Inversion Precision,APOE4 Adversarial Info Gain,rs769449 Inversion ROC-AUC,rs769449 Inversion Precision,Membership Privacy Score,Attribute Privacy Score,Overall Trustworthy Index
+Random Forest (Baseline Target),None (epsilon = inf),0.9474 +/- 0.0162,0.9973,0.7232,0.6623,0.2741,0.7878,0.5755,0.9226,0.7521,0.8243,0.1569,0.7366,0.7586,0.4245,0.2479,0.4652
+Differentially Private RF (Defended),Differential Privacy (eps* = 5.00),0.6842 +/- 0.0210,0.726,0.5683,0.6234,0.1578,0.5394,0.0788,0.75,0.3575,0.0,0.0,0.4977,0.0,0.9212,0.6425,0.7106
+XGBoost Classifier (Benchmark),None (epsilon = inf),0.8618 +/- 0.0469,0.9998,0.6599,0.6104,0.3399,0.8245,0.649,0.915,0.731,0.785,0.125,0.71,0.72,0.351,0.269,0.4266
+Logistic Regression (L2),None (L2 Regularization C=0.1),0.9906 +/- 0.0072,0.9995,0.6222,0.6494,0.3773,0.8655,0.731,0.8978,0.784,0.812,0.161,0.755,0.742,0.269,0.216,0.3691
